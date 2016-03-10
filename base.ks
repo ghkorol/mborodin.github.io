@@ -13,7 +13,7 @@ part pv.01 --size=10240 --grow
 volgroup vg1 pv.01
 logvol /        --vgname=vg1 --size=4096  --name=root --grow
 logvol swap     --vgname=vg1 --recommended --name=swap --fstype=swap
-ignoredisk --only-use=sda
+ignoredisk --only-use=xvda
 
 network --onboot yes --bootproto dhcp
 firewall --enabled --ssh --port=4505:tcp,4506:tcp
@@ -53,6 +53,6 @@ yum -y install https://repo.saltstack.com/yum/redhat/salt-repo-2015.8-2.el7.noar
 
 yum -y install salt-minion
 
-echo "Enabling salt minion"
-chkconfig salt-minion enabled
+#echo "Enabling salt minion"
+#chkconfig salt-minion enabled
 %end
