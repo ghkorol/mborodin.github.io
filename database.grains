@@ -1,0 +1,4 @@
+environment: emaerchenwald
+role: database
+database:
+  software: postgresql
