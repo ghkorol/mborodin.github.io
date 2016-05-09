@@ -23,6 +23,8 @@ timezone Europe/Berlin
 
 keyboard de
 
+repo --name=epel --baseurl=http://dl.fedoraproject.org/pub/epel/7/x86_64/
+
 reboot					# reboot automatically when done
 install					# instead of "upgrade"
 
