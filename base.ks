@@ -43,16 +43,3 @@ mc
 vim
 bzip2
 %end
-
-%post
-exec < /dev/tty3 > /dev/tty3
-
-chvt 3
-rpm --import https://repo.saltstack.com/yum/redhat/7/x86_64/latest/SALTSTACK-GPG-KEY.pub
-yum -y install https://repo.saltstack.com/yum/redhat/salt-repo-2015.8-2.el7.noarch.rpm
-
-yum -y install salt-minion
-
-#echo "Enabling salt minion"
-#chkconfig salt-minion enabled
-%end
